@@ -1,0 +1,686 @@
+.start-interview-page {
+    min-height: 100vh;
+    padding: 45px 24px 60px;
+
+    background:
+        radial-gradient(
+            circle at 10% 0%,
+            rgba(124, 58, 237, 0.13),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 95% 90%,
+            rgba(139, 92, 246, 0.1),
+            transparent 30%
+        ),
+        #f8f7ff;
+}
+
+.start-interview-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* HEADER */
+
+.start-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+
+    margin-bottom: 28px;
+}
+
+.start-badge {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border: 1px solid #ddd6fe;
+    border-radius: 999px;
+
+    background: #f5f3ff;
+
+    color: #6d28d9;
+
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.start-header h1 {
+    margin: 13px 0 7px;
+
+    color: #21182f;
+
+    font-size: clamp(30px, 4vw, 42px);
+    line-height: 1.15;
+    letter-spacing: -1.5px;
+}
+
+.start-header p {
+    max-width: 650px;
+
+    margin: 0;
+
+    color: #766d82;
+
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.ai-header-icon {
+    width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 17px;
+
+    background: linear-gradient(
+        135deg,
+        #5b21b6,
+        #8b5cf6
+    );
+
+    color: white;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    box-shadow:
+        0 12px 25px rgba(109, 40, 217, 0.2);
+}
+
+/* CARD */
+
+.interview-setup-card {
+    padding: 32px;
+
+    border: 1px solid rgba(124, 58, 237, 0.1);
+    border-radius: 22px;
+
+    background: rgba(255, 255, 255, 0.82);
+
+    box-shadow:
+        0 20px 55px rgba(76, 29, 149, 0.08);
+
+    backdrop-filter: blur(18px);
+}
+
+.setup-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-bottom: 24px;
+    margin-bottom: 27px;
+
+    border-bottom: 1px solid #eeeaf5;
+}
+
+.setup-card-header h2 {
+    margin: 0 0 5px;
+
+    color: #281e37;
+
+    font-size: 20px;
+    letter-spacing: -0.4px;
+}
+
+.setup-card-header p {
+    margin: 0;
+
+    color: #8a8295;
+
+    font-size: 12px;
+}
+
+.setup-step {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.setup-step span {
+    color: #6d28d9;
+
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.setup-step small {
+    color: #9b93a7;
+
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* ERROR */
+
+.setup-error {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    margin-bottom: 22px;
+    padding: 12px 14px;
+
+    border: 1px solid #fecaca;
+    border-radius: 10px;
+
+    background: #fef2f2;
+
+    color: #b91c1c;
+}
+
+.setup-error span {
+    width: 22px;
+    height: 22px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #fee2e2;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.setup-error p {
+    margin: 0;
+
+    font-size: 12px;
+}
+
+/* FORM GRID */
+
+.form-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 24px 22px;
+}
+
+.setup-field.full-width {
+    grid-column: 1 / -1;
+}
+
+.setup-field label {
+    display: block;
+
+    margin-bottom: 9px;
+
+    color: #342a43;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.setup-field small {
+    display: block;
+
+    margin-top: 7px;
+
+    color: #9a92a6;
+
+    font-size: 11px;
+}
+
+/* SELECT */
+
+.select-wrapper {
+    position: relative;
+}
+
+.select-wrapper select {
+    width: 100%;
+    height: 52px;
+
+    padding: 0 42px 0 15px;
+
+    appearance: none;
+
+    border: 1px solid #e3ddea;
+    border-radius: 11px;
+
+    outline: none;
+
+    background: #fff;
+
+    color: #30263e;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    cursor: pointer;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.select-wrapper select:focus {
+    border-color: #8b5cf6;
+
+    box-shadow:
+        0 0 0 4px rgba(139, 92, 246, 0.1);
+}
+
+.select-wrapper > span {
+    position: absolute;
+
+    right: 16px;
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    color: #7c6d91;
+
+    font-size: 18px;
+
+    pointer-events: none;
+}
+
+/* QUESTION OPTIONS */
+
+.question-options {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+.question-option {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 82px;
+
+    padding: 12px;
+
+    border: 1px solid #e4dfee;
+    border-radius: 12px;
+
+    background: white;
+
+    cursor: pointer;
+
+    text-align: center;
+
+    transition:
+        border-color 0.2s ease,
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.question-option:hover {
+    transform: translateY(-1px);
+
+    border-color: #c4b5fd;
+}
+
+.question-option.active {
+    border-color: #8b5cf6;
+
+    background: #f7f3ff;
+
+    box-shadow:
+        0 5px 18px rgba(109, 40, 217, 0.08);
+}
+
+.question-option input {
+    position: absolute;
+
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+.question-number {
+    display: block;
+
+    width: 100%;
+
+    color: #4c1d95;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    line-height: 1;
+
+    text-align: center;
+}
+
+.question-label {
+    display: block;
+
+    width: 100%;
+
+    margin-top: 5px;
+
+    color: #8a8195;
+
+    font-size: 10px;
+
+    line-height: 1.2;
+
+    text-align: center;
+}
+
+/* SUMMARY */
+
+.interview-summary {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    margin-top: 28px;
+    padding: 16px;
+
+    border: 1px solid #e9e1f8;
+    border-radius: 13px;
+
+    background: #faf8ff;
+}
+
+.summary-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 11px;
+
+    background: #ede9fe;
+
+    color: #6d28d9;
+
+    font-size: 18px;
+}
+
+.interview-summary strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #352945;
+
+    font-size: 12px;
+}
+
+.interview-summary p {
+    margin: 0;
+
+    color: #8a8195;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* START BUTTON */
+
+.start-button {
+    width: 100%;
+    height: 54px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    margin-top: 20px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #5b21b6,
+        #7c3aed
+    );
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 14px;
+    font-weight: 700;
+
+    box-shadow:
+        0 12px 25px rgba(109, 40, 217, 0.2);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.start-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 16px 30px rgba(109, 40, 217, 0.27);
+}
+
+.start-button:disabled {
+    cursor: not-allowed;
+
+    opacity: 0.7;
+}
+
+.start-button > span:last-child {
+    font-size: 19px;
+}
+
+/* SPINNER */
+
+.start-spinner {
+    width: 17px;
+    height: 17px;
+
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    border-top-color: white;
+
+    border-radius: 50%;
+
+    animation: start-spin 0.7s linear infinite;
+}
+
+@keyframes start-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* INFO */
+
+.start-info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 14px;
+
+    margin-top: 18px;
+}
+
+.info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 11px;
+
+    padding: 16px;
+
+    border: 1px solid rgba(124, 58, 237, 0.08);
+    border-radius: 13px;
+
+    background: rgba(255, 255, 255, 0.65);
+}
+
+.info-icon {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 9px;
+
+    background: #f0eafd;
+
+    color: #6d28d9;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.info-item strong {
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #3a3047;
+
+    font-size: 11px;
+}
+
+.info-item p {
+    margin: 0;
+
+    color: #91899c;
+
+    font-size: 10px;
+    line-height: 1.5;
+}
+
+/* TABLET */
+
+@media (max-width: 750px) {
+    .start-interview-page {
+        padding: 30px 18px 45px;
+    }
+
+    .interview-setup-card {
+        padding: 24px;
+    }
+
+    .question-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .start-info-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 560px) {
+    .start-interview-page {
+        padding: 22px 14px 35px;
+    }
+
+    .start-header {
+        gap: 15px;
+    }
+
+    .start-header h1 {
+        font-size: 29px;
+    }
+
+    .start-header p {
+        font-size: 13px;
+    }
+
+    .ai-header-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 14px;
+    }
+
+    .interview-setup-card {
+        padding: 20px 16px;
+
+        border-radius: 17px;
+    }
+
+    .setup-card-header {
+        padding-bottom: 19px;
+
+        margin-bottom: 22px;
+    }
+
+    .setup-card-header h2 {
+        font-size: 18px;
+    }
+
+    .setup-step {
+        display: none;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .setup-field.full-width {
+        grid-column: auto;
+    }
+
+    .question-options {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .question-option {
+        min-height: 78px;
+    }
+
+    .question-number {
+        font-size: 21px;
+    }
+
+    .question-label {
+        margin-top: 5px;
+    }
+
+    .interview-summary {
+        align-items: flex-start;
+    }
+
+    .interview-summary p {
+        font-size: 10px;
+    }
+
+    .start-button {
+        height: 52px;
+    }
+}
